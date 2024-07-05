@@ -14,7 +14,7 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
 
     # Initialize the parent chain for categories and topics
     category_chain = []
-    topic_chain = [''] * 6  # up to level 5 of topics (# to ####)
+    topic_chain = [''] * 6
     results = []
 
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -26,7 +26,7 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
                 match = pattern.match(line)
                 if match:
                     category_name = match.group(1).strip()
-                    # Adjust the category chain to current category depth
+                    # Adjusts the category chain to current category depth
                     category_chain = category_chain[:level-1] + [category_name]
                     # Reset topic chain from this level onward when category changes
                     topic_chain = [''] * 6
@@ -36,8 +36,8 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
                 topic_match = re.search(link_pattern, line)
                 if topic_match:
                     topic_name = topic_match.group(1)
-                    topic_level = len(re.match(r'^(#+)', line).group(0))  # count # to determine the level
-                    topic_chain[topic_level] = topic_name  # update the current level's topic name
+                    topic_level = len(re.match(r'^(#+)', line).group(0))
+                    topic_chain[topic_level] = topic_name
 
                     # Build the parent chain using categories and applicable topics
                     parent_chain = category_chain + [name for name in topic_chain[1:topic_level] if name]
@@ -51,6 +51,7 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
             writer.writerow([topic, chain])
 
 
+# Parse the Wikipedia pages from the markdown file to a CSV file
 file_path = "../../data/raw/wikipedia_pages.md"
 output_csv_path = "../../data/interim/pages.csv"
 parse_markdown_file_to_csv(file_path, output_csv_path)
