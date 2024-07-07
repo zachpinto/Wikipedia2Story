@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 import spacy
 spacy.require_cpu()
 
-# Load environment variables
-load_dotenv()
-API_KEY = os.getenv("OPENAI_API_KEY")
+# Access API Key securely from Streamlit's secrets
+API_KEY = st.secrets["secrets"]["OPENAI_API_KEY"]
 
 # Initialize OpenAI client with the API key
 client = openai.OpenAI(api_key=API_KEY)
