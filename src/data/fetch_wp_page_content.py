@@ -3,7 +3,7 @@ import re
 
 
 def fetch_wikipedia_content(page_title):
-    # Encode the page title to handle spaces and special characters
+    # Encode the page title to be used in the URL
     url_title = requests.utils.quote(page_title)
 
     # Request URL for the Wikipedia API
@@ -13,10 +13,11 @@ def fetch_wikipedia_content(page_title):
     response = requests.get(url)
     response.raise_for_status()
 
-    # Extract the page content
+    # Extract page content
     data = response.json()
     page = next(iter(data['query']['pages'].values()))
 
+    # Check if the page content is available
     if 'extract' in page:
         content = page['extract']
         # Remove sections like 'See also', 'References', etc. We don't need them.
@@ -30,6 +31,6 @@ def fetch_wikipedia_content(page_title):
 # Function to fetch the content of a Wikipedia page
 # The function takes the page title as input and returns the content of the page
 # This will be passed into the main function in the streamlit app
-def main(page_title):
+def fetch_wp_page_content(page_title):
     content = fetch_wikipedia_content(page_title)
     return content
