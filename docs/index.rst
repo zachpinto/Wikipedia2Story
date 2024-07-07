@@ -1,20 +1,18 @@
-.. project_name documentation master file, created by
-   sphinx-quickstart.
+.. Wikipedia2Story documentation master file, created by sphinx-quickstart
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-project_name documentation!
-==============================================
+Welcome to Wikipedia2Story's documentation!
+===========================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
 
    getting-started
    commands
-
-
 
 Indices and tables
 ==================
