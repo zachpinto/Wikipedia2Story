@@ -2,6 +2,7 @@ import openai
 import os
 from dotenv import load_dotenv
 import spacy
+spacy.require_cpu()
 
 # Load environment variables
 load_dotenv()
