@@ -16,4 +16,4 @@ requests~=2.32.3
 openai~=1.35.10
 pandas~=2.2.2
 spacy==3.7.5
-thinc==8.0.17
+thinc>=8.2.2,<8.3.0
