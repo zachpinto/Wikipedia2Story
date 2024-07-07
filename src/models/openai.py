@@ -88,10 +88,10 @@ def generate_images(summaries, theme_code):
                 images.append(response.data[0].url)
             else:
                 # In case of image generation error, use fallback
-                images.append('https://github.com/zachpinto/Wikipedia2Story/blob/master/assets/image_generation_error.png')
+                images.append('https://raw.githubusercontent.com/zachpinto/Wikipedia2Story/2679bb5abd9a3838717915a606b173c945aea270/assets/error.jpg')
         except Exception as e:
             print(f"Error generating image for summary starting with '{summary[:30]}...': {str(e)}")
-            images.append('https://github.com/zachpinto/Wikipedia2Story/blob/master/assets/image_generation_error.png')
+            images.append('https://raw.githubusercontent.com/zachpinto/Wikipedia2Story/2679bb5abd9a3838717915a606b173c945aea270/assets/error.jpg')
     return images
 
 

@@ -30,6 +30,16 @@ def main():
         </style>
         """, unsafe_allow_html=True)
 
+    # Sidebar directions
+    st.sidebar.markdown("""
+    ### How to Explore:
+    1. **First, choose a time period.**
+    2. **Then, choose a subcategory.**
+    3. **After that, you can either continue 'drilling down' into new subcategories or select a specific history topic on the main menu to the right.**
+
+    Please note, the further you 'drill down' by subcategory, the more narrow your options of topics will be.
+    """, unsafe_allow_html=True)
+
     # Sidebar dropdown logic
     max_columns = df.shape[1] - 2
     options = [None] * max_columns
