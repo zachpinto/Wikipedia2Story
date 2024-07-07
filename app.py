@@ -52,7 +52,7 @@ def main():
                 unique_values = [''] + pd.unique(filtered_df[next_column_name].dropna()).tolist()
 
                 if unique_values and len(unique_values) > 1:
-                    options[i] = st.sidebar.selectbox(f"Select Level {i + 1}", unique_values)
+                    options[i] = st.sidebar.selectbox(f"(Optional) Select Subcategory:", unique_values)
             else:
                 break
 
