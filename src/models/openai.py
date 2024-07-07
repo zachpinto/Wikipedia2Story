@@ -1,9 +1,7 @@
 import openai
 import os
 from dotenv import load_dotenv
-import spacy
 import streamlit as st
-spacy.require_cpu()
 
 # Access API Key securely from Streamlit's secrets
 API_KEY = st.secrets["OPENAI_API_KEY"]
@@ -73,11 +71,8 @@ def generate_images(summaries, theme_code):
     print("Using theme code:", theme_code)
     images = []
     for summary in summaries:
-        # Focus on extracting key nouns or symbols from the summary, using Spacy for NLP (helper function found below)
-        key_elements = extract_key_elements(summary)
-
         # Generate a prompt for the image generation API
-        prompt = f"Create a {theme_code} image focusing on: {key_elements}. Please avoid generating abstract art, text, or anything unrelated to the {key_elements}. Focus on visual representation."
+        prompt = f"Create a {theme_code} image focusing on summary: {summary}. Please avoid generating abstract art, text, or anything unrelated to the summary. If you find the summary too long or sensitive to display as artwork, choose keywords that are tangentially related to the summary, like proper nouns, locations, etc. Focus on visual representation."
 
         if len(prompt) > 1000:
             prompt = prompt[:1000]
@@ -98,14 +93,6 @@ def generate_images(summaries, theme_code):
             print(f"Error generating image for summary starting with '{summary[:30]}...': {str(e)}")
             images.append('../../assets/image_generation_error.png')
     return images
-
-
-# Helper function to extract key elements from a summary
-def extract_key_elements(summary):
-    nlp = spacy.load("en_core_web_sm")
-    doc = nlp(summary)
-    elements = [ent.text for ent in doc.ents]
-    return ', '.join(elements)
 
 
 def generate_images_from_content(content, theme_code):
