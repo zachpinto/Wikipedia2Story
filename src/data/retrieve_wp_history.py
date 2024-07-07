@@ -2,7 +2,7 @@ import re
 import csv
 
 def parse_markdown_file_to_csv(file_path, output_csv_path):
-    # Regular expressions for matching categories and extracting topics
+    # Regex for matching categories and extracting topics
     category_patterns = {
         1: re.compile(r'^=([^=]+)=$'),
         2: re.compile(r'^==([^=]+)==$'),
@@ -12,7 +12,7 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
     }
     link_pattern = re.compile(r'\[\[([^]]+)\]\]')
 
-    # Initialize the parent chain for categories and topics
+    # Initialize variables
     category_chain = []
     topic_chain = [''] * 6
     results = []
@@ -26,9 +26,7 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
                 match = pattern.match(line)
                 if match:
                     category_name = match.group(1).strip()
-                    # Adjusts the category chain to current category depth
                     category_chain = category_chain[:level-1] + [category_name]
-                    # Reset topic chain from this level onward when category changes
                     topic_chain = [''] * 6
                     break
             else:
@@ -38,8 +36,6 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
                     topic_name = topic_match.group(1)
                     topic_level = len(re.match(r'^(#+)', line).group(0))
                     topic_chain[topic_level] = topic_name
-
-                    # Build the parent chain using categories and applicable topics
                     parent_chain = category_chain + [name for name in topic_chain[1:topic_level] if name]
                     results.append((topic_name, ' > '.join(parent_chain)))
 
@@ -51,7 +47,7 @@ def parse_markdown_file_to_csv(file_path, output_csv_path):
             writer.writerow([topic, chain])
 
 
-# Parse the Wikipedia pages from the markdown file to a CSV file
+# Parse the Wikipedia pages from the markdown file and write to a CSV file
 file_path = "../../data/raw/wikipedia_pages.md"
 output_csv_path = "../../data/interim/pages.csv"
 parse_markdown_file_to_csv(file_path, output_csv_path)
