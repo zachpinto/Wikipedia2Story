@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net" modified="2024-07-07T19:29:38.029Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="MRlrFMlwdbRB0cxXSLLw" version="24.5.4" type="device">
+  <diagram name="Page-1" id="i3nXvwspLEmWD5P0hmmn">
+    <mxGraphModel dx="2210" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-10" value="Prompt user to select&amp;nbsp;&lt;div&gt;time period, subcategories,&lt;/div&gt;&lt;div&gt;and art styles&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-2" target="ukWcNoajRDngZ1XgHpZB-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="724" y="150" />
+              <mxPoint x="190" y="150" />
+              <mxPoint x="190" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-2" value="Client-facing Streamlit app" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png;" vertex="1" parent="1">
+          <mxGeometry x="650" y="193.74" width="147.24" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://1000logos.net/wp-content/uploads/2021/04/Wikipedia-logo.png;" vertex="1" parent="1">
+          <mxGeometry x="-18.28" y="193.74" width="169.82" height="95.53" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-4" target="ukWcNoajRDngZ1XgHpZB-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-4" target="ukWcNoajRDngZ1XgHpZB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-4" value="Python Script to retrieve&#xa;markdown page titles" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="30" y="390" width="73.25" height="80.27" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-5" target="ukWcNoajRDngZ1XgHpZB-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="360" />
+              <mxPoint x="480" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-5" target="ukWcNoajRDngZ1XgHpZB-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-5" value="OpenAI APIs" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png;" vertex="1" parent="1">
+          <mxGeometry x="444.19000000000005" y="188.61" width="89.06" height="90.27" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="257.7777777777778" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-6" target="ukWcNoajRDngZ1XgHpZB-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-6" value="Python Script to retrieve&#xa;contents of single WP page" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="240" y="390" width="73.25" height="80.27" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-7" target="ukWcNoajRDngZ1XgHpZB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-7" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://1000logos.net/wp-content/uploads/2021/04/Wikipedia-logo.png;" vertex="1" parent="1">
+          <mxGeometry x="191.72" y="193.74" width="169.82" height="95.53" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-8" target="ukWcNoajRDngZ1XgHpZB-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-8" value="API Calls to OpenAI &#xa;GPT-4o and DALL-E-3" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="460" y="390" width="73.25" height="80.27" as="geometry" />
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ukWcNoajRDngZ1XgHpZB-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="726.625" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ukWcNoajRDngZ1XgHpZB-9" value="Build streamlit app" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="690" y="390" width="73.25" height="80.27" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
