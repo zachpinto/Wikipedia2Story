@@ -1,0 +1,4 @@
+.env
+/data/interim/
+/data/raw/
+
