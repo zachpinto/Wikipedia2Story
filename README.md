@@ -1,7 +1,7 @@
 Wikipedia2Story
 ==============================
 
-![image](/Users/pintoza/Desktop/dev/other/Wikipedia2Story/architecture/wikipedia2story_architecture.png)
+![img.png](img.png)
 
 Wikipedia2Story is a Streamlit application that lets users learn about history by selecting time periods and subcategories to drill down to specific topics. Upon selection, the app dynamically fetches content from Wikipedia, summarizes it, and uses the OpenAI GPT-4o model to generate ten descriptive captions. These captions are then used with the DALL-E 3 model to create visual representations in a user-selected art style.
 
