@@ -76,13 +76,26 @@ def main():
         topics = filtered_topics['Topic'].tolist()
         selected_topic = st.selectbox("Select Topic", [''] + topics)
 
-    theme_options = {"8-bit pixel art": "8-bit Pixel Art", "Anime": "Anime-Style", "Watercolor": "Watercolor style",
-                     "Or, choose your own:": "Custom"}
+    # Theme selection
+    theme_options = {
+        "8-bit pixel art": "8-bit Pixel Art",
+        "Anime": "Anime-Style",
+        "Watercolor": "Watercolor style",
+        "CUSTOM": "Custom"
+    }
     theme_choice = st.selectbox("Choose a visual theme:", list(theme_options.keys()))
-    if theme_choice == "CUSTOM (Choose your own art style)":
+
+    # Initialize theme_code variable
+    theme_code = None
+
+    # Check if custom theme is selected
+    if theme_choice == "CUSTOM:":
         theme_code = st.text_input("Type your custom theme style here:", "")
     else:
         theme_code = theme_options[theme_choice]
+
+    # This print statement is just for debugging, can be removed later
+    st.write(f"Current theme code: {theme_code}")  # Helps you see what theme_code is being set
 
     # Generate story button
     if st.button("Generate Story"):
