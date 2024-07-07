@@ -88,13 +88,14 @@ def generate_images(summaries, theme_code):
                 images.append(response.data[0].url)
             else:
                 # In case of image generation error, use fallback
-                images.append('../../assets/image_generation_error.png')
+                images.append('https://github.com/zachpinto/Wikipedia2Story/blob/master/assets/image_generation_error.png')
         except Exception as e:
             print(f"Error generating image for summary starting with '{summary[:30]}...': {str(e)}")
-            images.append('../../assets/image_generation_error.png')
+            images.append('https://github.com/zachpinto/Wikipedia2Story/blob/master/assets/image_generation_error.png')
     return images
 
 
+# Function to format the caption for the image
 def generate_images_from_content(content, theme_code):
     """Generates images from summaries of the provided content based on user-selected art style theme."""
     summaries = summarize_content(content)
