@@ -94,8 +94,7 @@ def main():
     else:
         theme_code = theme_options[theme_choice]
 
-    # This print statement is just for debugging, can be removed later
-    st.write(f"Current theme code: {theme_code}")  # Helps you see what theme_code is being set
+    st.write(f"Please be patient while your story is being generated. This process usually take 60-90 seconds.")
 
     # Generate story button
     if st.button("Generate Story"):
