@@ -2,6 +2,7 @@ import openai
 import os
 from dotenv import load_dotenv
 import spacy
+import streamlit as st
 spacy.require_cpu()
 
 # Access API Key securely from Streamlit's secrets
