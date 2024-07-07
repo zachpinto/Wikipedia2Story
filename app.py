@@ -89,7 +89,7 @@ def main():
     theme_code = None
 
     # Check if custom theme is selected
-    if theme_choice == "CUSTOM:":
+    if theme_choice == "CUSTOM":
         theme_code = st.text_input("Type your custom theme style here:", "")
     else:
         theme_code = theme_options[theme_choice]
